@@ -1,0 +1,102 @@
+/* Skills.css */
+.skill0 {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-wrapper {
+  width: 60%;
+  overflow: visible; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.skills-container {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  color: white;
+  position: relative; 
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.skill-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  background-color: black;
+  transition: transform 0.3s ease;
+  position: relative; 
+  z-index: 1; 
+}
+
+.skill-item:hover {
+  transform: scale(1); 
+  z-index: 2; 
+}
+
+.skills-wrapper:hover .skills-container {
+  animation-play-state: paused;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 20px rgba(5, 5, 5, 1);
+  position: relative; 
+  z-index: 1; 
+}
+
+.skill-icon {
+  font-size: 130px;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  position: relative; 
+  z-index: 2; 
+}
+
+.skill-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-box::before {
+  opacity: 1;
+}
+
+.skill-item:hover .skill-box {
+  transform: scale(1.2); /* Increased scale for better visibility */
+}
+.text{
+  margin-bottom: 100px;
+}
